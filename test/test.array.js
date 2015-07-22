@@ -46,7 +46,7 @@ describe( 'array cdf', function tests() {
 
 		for ( i = 0; i < actual.length; i++ ) {
 			if ( isFiniteNumber( actual[ i ] ) && isFiniteNumber( expected[ i ] ) ) {
-				assert.closeTo( actual[ i ], expected[ i ], 1e-15 );
+				assert.closeTo( actual[ i ], expected[ i ], 1e-14 );
 			}
 		}
 	});

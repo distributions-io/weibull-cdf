@@ -138,7 +138,7 @@ describe( 'distributions-weibull-cdf', function tests() {
 			for ( var i = 0; i < data.length; i++ ) {
 				actual =  cdf( data[ i ], {
 					'lambda': validationData.lambda,
-		'k': validationData.k
+					'k': validationData.k
 				});
 				if ( isFiniteNumber( actual ) && isFiniteNumber( expected[ i ] ) ) {
 					assert.closeTo( actual, expected[ i ] , 1e-14 );
@@ -175,7 +175,7 @@ describe( 'distributions-weibull-cdf', function tests() {
 		actual = cdf( data, {
 			'copy': false,
 			'lambda': validationData.lambda,
-		'k': validationData.k
+			'k': validationData.k
 		});
 		assert.strictEqual( actual, data );
 
@@ -201,7 +201,7 @@ describe( 'distributions-weibull-cdf', function tests() {
 
 		actual = cdf( data, {
 			'lambda': validationData.lambda,
-		'k': validationData.k
+			'k': validationData.k
 		});
 		assert.notEqual( actual, data );
 
@@ -215,7 +215,7 @@ describe( 'distributions-weibull-cdf', function tests() {
 		actual = cdf( data, {
 			'copy': false,
 			'lambda': validationData.lambda,
-		'k': validationData.k
+			'k': validationData.k
 		});
 		expected = new Float32Array( validationData.expected.map( function( d ) {
 			return d === 'Inf' ? Infinity : d;
@@ -245,7 +245,7 @@ describe( 'distributions-weibull-cdf', function tests() {
 		actual = cdf( data, {
 			'dtype': 'float32',
 			'lambda': validationData.lambda,
-		'k': validationData.k
+			'k': validationData.k
 		});
 
 		assert.notEqual( actual, data );
@@ -276,7 +276,7 @@ describe( 'distributions-weibull-cdf', function tests() {
 		actual = cdf( data, {
 			'accessor': getValue,
 			'lambda': validationData.lambda,
-		'k': validationData.k
+			'k': validationData.k
 		});
 		assert.notEqual( actual, data );
 
@@ -291,7 +291,7 @@ describe( 'distributions-weibull-cdf', function tests() {
 			'accessor': getValue,
 			'copy': false,
 			'lambda': validationData.lambda,
-		'k': validationData.k
+			'k': validationData.k
 		});
 		assert.strictEqual( actual, data );
 
@@ -320,7 +320,7 @@ describe( 'distributions-weibull-cdf', function tests() {
 		actual = cdf( data, {
 			'path': 'x.1',
 			'lambda': validationData.lambda,
-		'k': validationData.k
+			'k': validationData.k
 		});
 
 		expected = validationData.expected
@@ -347,7 +347,7 @@ describe( 'distributions-weibull-cdf', function tests() {
 			'path': 'x/1',
 			'sep': '/',
 			'lambda': validationData.lambda,
-		'k': validationData.k
+			'k': validationData.k
 		});
 		assert.strictEqual( actual, data );
 
@@ -374,7 +374,7 @@ describe( 'distributions-weibull-cdf', function tests() {
 		mat = matrix( d1, [5,5], 'float64' );
 		out = cdf( mat, {
 			'lambda': validationData.lambda,
-		'k': validationData.k
+			'k': validationData.k
 		});
 
 		for ( i = 0; i < out.length; i++ ) {
@@ -387,7 +387,7 @@ describe( 'distributions-weibull-cdf', function tests() {
 		out = cdf( mat, {
 			'copy': false,
 			'lambda': validationData.lambda,
-		'k': validationData.k
+			'k': validationData.k
 		});
 		assert.strictEqual( mat, out );
 
@@ -413,7 +413,7 @@ describe( 'distributions-weibull-cdf', function tests() {
 		out = cdf( mat, {
 			'dtype': 'float32',
 			'lambda': validationData.lambda,
-		'k': validationData.k
+			'k': validationData.k
 		});
 
 		assert.strictEqual( out.dtype, 'float32' );

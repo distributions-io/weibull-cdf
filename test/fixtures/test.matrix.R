@@ -1,10 +1,10 @@
 options( digits = 16 )
 library( jsonlite )
 
-lambda = 1
-k = 1
+lambda = 1.5
+k = 1.5
 x = 0:24
-y = pweibull( x, lambda, k )
+y = pweibull( x, k, lambda )
 
 cat( y, sep = ",\n" )
 

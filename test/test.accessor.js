@@ -39,7 +39,7 @@ describe( 'accessor cdf', function tests() {
 		});
 		actual = new Array( data.length );
 
-		actual = cdf( actual, data, lambda, k,getValue );
+		actual = cdf( actual, data, lambda, k, getValue );
 
 		expected = validationData.expected.map( function( d ) {
 			return d === 'Inf' ? Infinity : d;
