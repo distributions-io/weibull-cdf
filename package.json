@@ -13,9 +13,9 @@
     }
   ],
   "scripts": {
-    "test": "./node_modules/.bin/mocha",
-    "test-cov": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha --dir ./reports/coverage -- -R spec",
-    "coveralls": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha --dir ./reports/coveralls/coverage --report lcovonly -- -R spec && cat ./reports/coveralls/coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./reports/coveralls"
+    "test": "mocha",
+    "test-cov": "istanbul cover ./node_modules/.bin/_mocha --dir ./reports/coverage -- -R spec",
+    "codecov": "istanbul cover ./node_modules/.bin/_mocha --dir ./reports/codecov/coverage --report lcovonly -- -R spec && cat ./reports/codecov/coverage/lcov.info | codecov && rm -rf ./reports/codecov"
   },
   "main": "./lib",
   "repository": {
@@ -30,12 +30,17 @@
     "stats",
     "cdf",
     "cumulative distribution",
-    "distribution function"
+    "distribution function",
+    "continuous",
+    "exponential family",
+    "survival analysis",
+    "life-times"
   ],
   "bugs": {
     "url": "https://github.com/compute-io/weibull-cdf/issues"
   },
   "dependencies": {
+    "codecov": "^1.0.1",
     "compute-array-constructors": "^1.0.0",
     "dstructs-matrix": "^2.0.0",
     "utils-deep-get": "^1.0.0",
@@ -55,11 +60,10 @@
   "devDependencies": {
     "chai": "3.x.x",
     "mocha": "2.x.x",
-    "coveralls": "^2.11.1",
     "istanbul": "^0.3.0",
     "jshint": "2.x.x",
     "jshint-stylish": "2.x.x",
-	"validate.io-finite": "^1.0.0"
+    "validate.io-finite": "^1.0.0"
   },
   "license": "MIT"
 }

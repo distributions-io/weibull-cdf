@@ -1,6 +1,6 @@
 Cumulative Distribution Function
 ===
-[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][coveralls-image]][coveralls-url] [![Dependencies][dependencies-image]][dependencies-url]
+[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][codecov-image]][codecov-url] [![Dependencies][dependencies-image]][dependencies-url]
 
 > [Weibull](https://en.wikipedia.org/wiki/Weibull_distribution) distribution [cumulative distribution function](https://en.wikipedia.org/wiki/Cumulative_distribution_function).
 
@@ -11,7 +11,7 @@ The [cumulative distribution function](https://en.wikipedia.org/wiki/Cumulative_
 	<br>
 </div>
 
-where `lambda` is the shape parameter and `k` is the scale parameter.
+where `lambda > 0` is the shape parameter and `k > 0` is the scale parameter.
 
 ## Installation
 
@@ -79,7 +79,7 @@ The function accepts the following `options`:
 *	__path__: [deepget](https://github.com/kgryte/utils-deep-get)/[deepset](https://github.com/kgryte/utils-deep-set) key path.
 *	__sep__: [deepget](https://github.com/kgryte/utils-deep-get)/[deepset](https://github.com/kgryte/utils-deep-set) key path separator. Default: `'.'`.
 
-A [Weibull](https://en.wikipedia.org/wiki/Weibull_distribution) distribution is a function of 2 parameter(s): `lambda`(shape parameter) and `k`(scale parameter). By default, `lambda` is equal to `1` and `k` is equal to `1`. To adjust either parameter, set the corresponding option(s).
+A [Weibull](https://en.wikipedia.org/wiki/Weibull_distribution) distribution is a function of two parameters: `lambda > 0`(shape parameter) and `k > 0`(scale parameter). By default, `lambda` is equal to `1` and `k` is equal to `1`. To adjust either parameter, set the corresponding option.
 
 ``` javascript
 var x = [ -1, 0, 1, 2, 3 ];
@@ -365,8 +365,8 @@ Copyright &copy; 2015. The [Compute.io](https://github.com/compute-io) Authors.
 [travis-image]: http://img.shields.io/travis/distributions-io/weibull-cdf/master.svg
 [travis-url]: https://travis-ci.org/distributions-io/weibull-cdf
 
-[coveralls-image]: https://img.shields.io/coveralls/distributions-io/weibull-cdf/master.svg
-[coveralls-url]: https://coveralls.io/r/distributions-io/weibull-cdf?branch=master
+[codecov-image]: https://img.shields.io/codecov/c/github/distributions-io/weibull-cdf/master.svg
+[codecov-url]: https://codecov.io/github/distributions-io/weibull-cdf?branch=master
 
 [dependencies-image]: http://img.shields.io/david/distributions-io/weibull-cdf.svg
 [dependencies-url]: https://david-dm.org/distributions-io/weibull-cdf
